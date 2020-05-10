@@ -179,6 +179,12 @@
       "phoneme_map": "espeak_phonemes.txt",
       "open_transcription": false
     },
+    "google": {
+      "credentials": "api-credentials.json",
+      "min_confidence": 0,
+      "language_code": "en_US",
+      "compatible": true
+    },
     "remote": {
       "url": "http://my-server:12101/api/speech-to-text"
     },

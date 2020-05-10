@@ -921,6 +921,7 @@
                 <option value="remote">Remote HTTP</option>
                 <option value="command">Local Command</option>
                 <option value="hermes">Hermes MQTT</option>
+                <option value="google">Google Cloud</option>
             </select>
 
             <span class="fa-stack ml-2" x-show="profile.speech_to_text.system != initialSystems.stt">
@@ -1367,6 +1368,21 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Google Cloud -->
+            <div x-show="profile.speech_to_text.system == 'google'">
+                <div class="form-group">
+                    <div class="form-row">
+                        <a target="_blank" href="docs/speech-to-text/#google">Documentation</a>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <p>
+                        TODO
+                    </p>
+                </div>
+            </div>
+            <!-- End Command -->
 
         </div>
     </div>
