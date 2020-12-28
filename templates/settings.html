@@ -1460,7 +1460,7 @@
             <div x-show="profile.intent.system == 'fuzzywuzzy'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-recognition/#fuzzywuzzy">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-recognition/#fuzzywuzzy">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1497,7 +1497,7 @@
             <div x-show="profile.intent.system == 'rasa'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-recognition/#rasanlu">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-recognition/#rasanlu">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1566,7 +1566,7 @@
             <div x-show="profile.intent.system == 'snips'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-recognition/#snips-nlu">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-recognition/#snips-nlu">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1613,7 +1613,7 @@
             <div x-show="profile.intent.system == 'remote'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-recognition/#remote">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-recognition/#remote">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1660,7 +1660,7 @@
             <div x-show="profile.intent.system == 'command'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-recognition/#command">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-recognition/#command">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1700,7 +1700,7 @@
             <div x-show="profile.intent.system == 'hermes'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/services/#intent-recognition">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/services/#intent-recognition">Documentation</a>
                     </div>
                     <div class="form-row">
                         <p>
@@ -1733,7 +1733,7 @@
                 <option value="marytts">MaryTTS</option>
                 <option value="wavenet">Google Wavenet</option>
                 <option value="opentts">OpenTTS</option>
-                <!-- <option value="larynx">Larynx</option> -->
+                <option value="larynx">Larynx</option>
                 <option value="remote">Remote HTTP</option>
                 <option value="command">Local Command</option>
                 <option value="hermes">Hermes MQTT</option>
@@ -1752,7 +1752,7 @@
             <div x-show="profile.text_to_speech.system == 'espeak'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#espeak">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#espeak">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1778,6 +1778,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-espeak-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-espeak-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.espeak.volume" :disabled="profile.text_to_speech.system != 'espeak'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End Espeak -->
 
@@ -1785,7 +1793,7 @@
             <div x-show="profile.text_to_speech.system == 'picotts'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#picotts">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#picotts">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1796,6 +1804,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-picotts-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-picotts-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.picotts.volume" :disabled="profile.text_to_speech.system != 'picotts'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End PicoTTS -->
 
@@ -1803,7 +1819,7 @@
             <div x-show="profile.text_to_speech.system == 'nanotts'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#nanotts">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#nanotts">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1814,6 +1830,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-nanotts-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-nanotts-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.nanotts.volume" :disabled="profile.text_to_speech.system != 'nanotts'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End NanoTTS -->
 
@@ -1821,7 +1845,7 @@
             <div x-show="profile.text_to_speech.system == 'flite'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#flite">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#flite">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1833,6 +1857,8 @@
                             <input id="tts-flite-voice" x-model="profile.text_to_speech.flite.voice" type="text" class="form-control" placeholder="default">
                         </div>
                     </div>
+                </div>
+                <div class="form-group">
                     <div class="form-row mt-2">
                         <div class="col-xs-auto">
                             <label for="tts-flite-voices">Available Voices:</label>
@@ -1847,6 +1873,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-flite-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-flite-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.flite.volume" :disabled="profile.text_to_speech.system != 'flite'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End Flite -->
 
@@ -1854,7 +1888,7 @@
             <div x-show="profile.text_to_speech.system == 'marytts'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#marytts">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#marytts">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1896,6 +1930,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-marytts-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-marytts-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.marytts.volume" :disabled="profile.text_to_speech.system != 'marytts'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End MaryTTS -->
 
@@ -1903,7 +1945,7 @@
             <div x-show="profile.text_to_speech.system == 'wavenet'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#wavenet">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#wavenet">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1946,6 +1988,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-wavenet-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-wavenet-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.wavenet.volume" :disabled="profile.text_to_speech.system != 'wavenet'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End Wavenet -->
 
@@ -1953,7 +2003,7 @@
             <div x-show="profile.text_to_speech.system == 'opentts'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#opentts">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#opentts">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -1987,6 +2037,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-opentts-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-opentts-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.opentts.volume" :disabled="profile.text_to_speech.system != 'opentts'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End OpenTTS -->
 
@@ -1994,7 +2052,7 @@
             <div x-show="profile.text_to_speech.system == 'larynx'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#larynx">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#larynx">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2020,6 +2078,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-larynx-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-larynx-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.larynx.volume" :disabled="profile.text_to_speech.system != 'larynx'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End Larynx -->
 
@@ -2027,7 +2093,7 @@
             <div x-show="profile.text_to_speech.system == 'remote'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#remote">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#remote">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2052,7 +2118,7 @@
             <div x-show="profile.text_to_speech.system == 'command'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/text-to-speech/#command">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/text-to-speech/#command">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2096,6 +2162,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="tts-command-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="tts-command-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.text_to_speech.command.volume" :disabled="profile.text_to_speech.system != 'command'">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End Command -->
 
@@ -2103,7 +2177,7 @@
             <div x-show="profile.text_to_speech.system == 'hermes'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/services/#text-to-speech">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/services/#text-to-speech">Documentation</a>
                     </div>
                     <div class="form-row">
                         <p>
@@ -2166,28 +2240,38 @@
             <div x-show="profile.sounds.system == 'aplay'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/audio-output/#alsa">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/audio-output/#alsa">Documentation</a>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="col-xs-auto">
-                        <label for="sounds-aplay-device">Device:</label>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-xs-auto">
+                            <label for="sounds-aplay-device">Device:</label>
+                        </div>
+                        <div class="col">
+                            <input id="sounds-aplay-device" x-model="profile.sounds.aplay.device" type="text" class="form-control">
+                        </div>
                     </div>
-                    <div class="col">
-                        <input id="sounds-aplay-device" x-model="profile.sounds.aplay.device" type="text" class="form-control">
+                    <div class="form-row mt-2">
+                        <div class="col-xs-auto">
+                            <label for="sounds-aplay-devices">Available Devices:</label>
+                        </div>
+                        <div class="col">
+                            <select id="sounds-aplay-devices" x-model="profile.sounds.aplay.device" class="form-control">
+                                <option value="" selected>Default Device</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-auto">
+                            <button onclick="refreshOutputDevices('aplay')" class="btn btn-primary form-control" placeholder="Refresh aplay devices">Refresh</button>
+                        </div>
                     </div>
                 </div>
-                <div class="form-row mt-2">
-                    <div class="col-xs-auto">
-                        <label for="sounds-aplay-devices">Available Devices:</label>
-                    </div>
-                    <div class="col">
-                        <select id="sounds-aplay-devices" x-model="profile.sounds.aplay.device" class="form-control">
-                            <option value="" selected>Default Device</option>
-                        </select>
-                    </div>
-                    <div class="col-xs-auto">
-                        <button onclick="refreshOutputDevices('aplay')" class="btn btn-primary form-control" placeholder="Refresh aplay devices">Refresh</button>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="sounds-aplay-volume" class="col-form-label">Volume</label>
+                        <div class="col-sm-auto">
+                            <input id="sounds-aplay-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.sounds.aplay.volume" :disabled="profile.sounds.system != 'aplay'">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2197,7 +2281,7 @@
             <div x-show="profile.sounds.system == 'remote'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/audio-output/#remote">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/audio-output/#remote">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2215,7 +2299,7 @@
             <div x-show="profile.sounds.system == 'command'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/audio-output/#command">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/audio-output/#command">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2241,7 +2325,7 @@
             <div x-show="profile.sounds.system == 'hermes'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/services/#audio-output">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/services/#audio-output">Documentation</a>
                     </div>
                     <div class="form-row">
                         <p>
@@ -2284,7 +2368,7 @@
             <div x-show="profile.dialogue.system == 'rhasspy'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/services/#dialogue-manager">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/services/#dialogue-manager">Documentation</a>
                     </div>
                     <div class="form-row">
                         <p>
@@ -2312,7 +2396,7 @@
             <div x-show="profile.dialogue.system == 'hermes'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/services/#dialogue-manager">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/services/#dialogue-manager">Documentation</a>
                     </div>
                     <div class="form-row">
                         <p>
@@ -2355,7 +2439,7 @@
             <div x-show="profile.handle.system == 'hass'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-handling/#home-assistant">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-handling/#home-assistant">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2433,7 +2517,7 @@
             <div x-show="profile.handle.system == 'remote'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-handling/#remote-server">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-handling/#remote-server">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2451,7 +2535,7 @@
             <div x-show="profile.handle.system == 'command'">
                 <div class="form-group">
                     <div class="form-row">
-                        <a target="_blank" href="{{ url_prefix }}/intent-handling/#command">Documentation</a>
+                        <a target="_blank" href="{{ url_prefix }}/docs/intent-handling/#command">Documentation</a>
                     </div>
                 </div>
                 <div class="form-group">
@@ -2533,6 +2617,14 @@
                 <label for="sounds-error" class="col-form-label">Error WAV</label>
                 <div class="col">
                     <input id="sounds-error" type="text" class="form-control" x-model="profile.sounds.error">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <label for="dialogue-volume" class="col-form-label">Volume</label>
+                <div class="col-sm-auto">
+                    <input id="dialogue-volume" type="number" min="0" max="1" step="0.05" class="form-control" x-model="profile.dialogue.volume">
                 </div>
             </div>
         </div>
@@ -2678,16 +2770,16 @@
      var message = (suppressMessage) ? '' : 'Deleting ' + wakewordId;
 
      if (window.confirm('Really delete ' + wakewordId + '?')) {
-            rhasspy.postBusy(message,
-                            '/api/delete-wake-word',
-                            wakewordId)
-                    .done((r) => {
-                        if (window.confirm("Hotword deleted. Restart Rhasspy?")) {
-                            rhasspy.restart();
-                        } else {
-                            rhasspy.hideBusy();
-                        }
-                    });
+         rhasspy.postBusy(message,
+                          '/api/delete-wake-word',
+                          wakewordId)
+                .done((r) => {
+                    if (window.confirm("Hotword deleted. Restart Rhasspy?")) {
+                        rhasspy.restart();
+                    } else {
+                        rhasspy.hideBusy();
+                    }
+                });
      }
  }
 
@@ -2721,7 +2813,7 @@
      var missing = $('#raven-missing-' + i);
 
      rhasspy.postBusy(message,
-                     '/api/record-wake-example?savePath=' + filename)
+                      '/api/record-wake-example?savePath=' + filename)
             .done((r) => {
                 // Change missing label
                 missing.text('Recorded');
@@ -2772,8 +2864,8 @@
  }
 
  function refreshSelects() {
-    if ($('#tts-' + rhasspy.profile.text_to_speech.system + '-voices').length) {
-        refreshVoices(rhasspy.profile.text_to_speech.system, true);
+     if ($('#tts-' + rhasspy.profile.text_to_speech.system + '-voices').length) {
+         refreshVoices(rhasspy.profile.text_to_speech.system, true);
      }
 
      if ($('#wake-' + rhasspy.profile.wake.system + '-hotwords').length) {
@@ -2781,11 +2873,11 @@
      }
 
      if ($('#sounds-' + rhasspy.profile.sounds.system + '-devices').length) {
-        refreshOutputDevices(rhasspy.profile.sounds.system, true);
+         refreshOutputDevices(rhasspy.profile.sounds.system, true);
      }
 
      if ($('#microphone-' + rhasspy.profile.microphone.system + '-devices').length) {
-        refreshInputDevices(rhasspy.profile.microphone.system, true);
+         refreshInputDevices(rhasspy.profile.microphone.system, true);
      }
  }
 
